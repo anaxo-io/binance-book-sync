@@ -46,7 +46,7 @@ async fn main() -> Result<(), binance_book_sync::Error> {
             } => {
                 deltas += 1;
                 // Deltas arrive every 100ms; print occasionally rather than every one.
-                if deltas % 20 == 0 {
+                if deltas.is_multiple_of(20) {
                     println!(
                         "{symbol} delta @{last_update_id}: {} bid / {} ask changes ({deltas} so far)",
                         bids.len(),
