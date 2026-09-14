@@ -1,6 +1,6 @@
 [package]
 name = "binance-book-sync"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.88"
 description = "Keeps a local Binance order book in sync: buffers diff events, reconciles against a REST snapshot, and detects sequence gaps"

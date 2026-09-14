@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-14
+
 ### Changed
 
 - Update `tokio-tungstenite` from 0.24 to 0.30. `Message::Text` carries `Utf8Bytes`
@@ -21,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Both are **breaking for this crate**, not merely internal: `reqwest::Error` and
   `tungstenite::Error` are reachable through the public `Error::Http` and
   `Error::WebSocket` variants, so code matching on them must move to the new versions.
-  These are unreleased: publishing them requires a 0.2.0, not a patch.
+  That is why this is 0.2.0 rather than a patch release.
 
 ## [0.1.0] - 2026-09-14
 
@@ -67,5 +69,6 @@ reworked rather than copied:
 - One connection per `DepthStream`. Binance caps streams per connection, so a large symbol
   list needs several.
 
-[Unreleased]: https://github.com/anaxo-io/binance-book-sync/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/anaxo-io/binance-book-sync/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/anaxo-io/binance-book-sync/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/anaxo-io/binance-book-sync/releases/tag/v0.1.0
