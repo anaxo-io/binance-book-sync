@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update `tokio-tungstenite` from 0.24 to 0.30. `Message::Text` carries `Utf8Bytes`
+  rather than `String` from 0.26 onward
+  ([#4](https://github.com/anaxo-io/binance-book-sync/pull/4)).
+
+- Update `reqwest` from 0.12 to 0.13. The bundled `rustls-tls` feature is replaced by a
+  TLS implementation plus a root store, so `rustls` + `webpki-roots` reproduces the
+  previous behaviour, and the query-string builder moved behind an opt-in `query` feature
+  ([#5](https://github.com/anaxo-io/binance-book-sync/pull/5)).
+
+  Both are **breaking for this crate**, not merely internal: `reqwest::Error` and
+  `tungstenite::Error` are reachable through the public `Error::Http` and
+  `Error::WebSocket` variants, so code matching on them must move to the new versions.
+  Released as 0.2.0.
+
 ## [0.1.0] - 2026-09-14
 
 Initial release.
