@@ -1,0 +1,30 @@
+[package]
+name = "binance-book-sync"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Keeps a local Binance order book in sync: buffers diff events, reconciles against a REST snapshot, and detects sequence gaps"
+repository = "https://github.com/anaxo-io/binance-book-sync"
+documentation = "https://docs.rs/binance-book-sync"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["binance", "orderbook", "marketdata", "websocket", "crypto"]
+categories = ["api-bindings", "asynchronous", "finance"]
+exclude = ["/.github", "/deny.toml", "/rust-toolchain.toml"]
+
+[dependencies]
+futures-util = { version = "0.3", default-features = false, features = ["std", "sink"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+tokio = { version = "1", features = ["macros", "rt", "time", "sync"] }
+tokio-tungstenite = { version = "0.24", default-features = false, features = ["connect", "rustls-tls-webpki-roots"] }
+tracing = "0.1"
+
+[dev-dependencies]
+mockito = "1.5"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "sync"] }
+
+[package.metadata.docs.rs]
+all-features = true
