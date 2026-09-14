@@ -91,7 +91,9 @@ impl DepthStream {
 
         let (mut write, mut read) = stream.split();
 
-        write.send(Message::Text(self.subscribe_message())).await?;
+        write
+            .send(Message::Text(self.subscribe_message().into()))
+            .await?;
 
         let mut books: HashMap<String, BookSync> = self
             .symbols
