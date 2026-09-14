@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/anaxo-io/binance-book-sync/actions/workflows/ci.yml/badge.svg)](https://github.com/anaxo-io/binance-book-sync/actions/workflows/ci.yml)
 [![License: MIT OR Apache-2.0](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](#license)
-[![MSRV](https://img.shields.io/badge/MSRV-1.85-blue.svg)](https://blog.rust-lang.org/)
+[![MSRV](https://img.shields.io/badge/MSRV-1.88-blue.svg)](https://blog.rust-lang.org/)
 
 Keeps a local Binance order book in sync, and tells you when it has failed.
 

@@ -8,6 +8,8 @@ allow = [
   "Apache-2.0 WITH LLVM-exception",
   "BSD-2-Clause",
   "BSD-3-Clause",
+  # webpki-roots ships Mozilla's CA certificate data under a permissive data licence.
+  "CDLA-Permissive-2.0",
   "ISC",
   "Unicode-3.0",
   "Zlib",

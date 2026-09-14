@@ -2,7 +2,7 @@
 name = "binance-book-sync"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.85"
+rust-version = "1.88"
 description = "Keeps a local Binance order book in sync: buffers diff events, reconciles against a REST snapshot, and detects sequence gaps"
 repository = "https://github.com/anaxo-io/binance-book-sync"
 documentation = "https://docs.rs/binance-book-sync"

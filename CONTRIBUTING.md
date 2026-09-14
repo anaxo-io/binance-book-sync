@@ -23,7 +23,7 @@ cargo test --all-features
 cargo doc --no-deps --all-features
 ```
 
-All four must pass. CI runs the same commands plus an MSRV check against Rust 1.85 and
+All four must pass. CI runs the same commands plus an MSRV check against Rust 1.88 and
 `cargo deny check`.
 
 ## Guidelines
