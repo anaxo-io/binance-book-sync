@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Both are **breaking for this crate**, not merely internal: `reqwest::Error` and
   `tungstenite::Error` are reachable through the public `Error::Http` and
   `Error::WebSocket` variants, so code matching on them must move to the new versions.
-  Released as 0.2.0.
+  These are unreleased: publishing them requires a 0.2.0, not a patch.
 
 ## [0.1.0] - 2026-09-14
 
