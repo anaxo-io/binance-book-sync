@@ -2,3 +2,6 @@ target/
 Cargo.lock
 *.swp
 .DS_Store
+
+# Internal working notes for Claude Code sessions.
+NOTES.md
