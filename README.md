@@ -19,13 +19,13 @@ WebSocket calls. Here the procedure is a plain state machine with no I/O, so eve
 — stale updates, an outdated snapshot, a gap mid-stream — is tested directly.
 
 This crate does not store a book. It emits events and leaves the data structure to you;
-pair it with [`orderbook`](https://github.com/anaxo-io/orderbook-rs) or your own.
+pair it with [`depthbook`](https://github.com/anaxo-io/depthbook) or your own.
 
 ## Quick start
 
 ```toml
 [dependencies]
-binance-book-sync = { git = "https://github.com/anaxo-io/binance-book-sync", tag = "v0.1.0" }
+binance-book-sync = { git = "https://github.com/anaxo-io/binance-book-sync", tag = "v0.2.0" }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 ```
 
